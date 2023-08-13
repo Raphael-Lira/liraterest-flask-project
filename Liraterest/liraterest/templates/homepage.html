@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>
+        {% block titulo %}
+        Liraterest
+        {% endblock %}
+    </title>
+</head>
+{% block body %}
+    <body>
+    <h1> Essaa aqui é a Homepage do liraterest</h1>
+    <p> Site em construção </p>
+
+    {% block formulario %}
+    <form method="POST">
+        {{ form.csrf_token  }}
+
+            {{ form.email.label() }}
+            {{ form.email() }}
+
+            {{ form.senha.label() }}
+            {{ form.senha() }}
+
+            {{ form.botao_confirmar() }}
+
+    </form>
+    {% endblock %}
+    </body>
+{% endblock %}
+</html>

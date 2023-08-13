@@ -1,0 +1,26 @@
+{% extends "homepage.html" %}
+
+{% block titulo %}
+Liraterest Criar conta
+{% endblock %}
+
+{% block formulario %}
+<form method="POST">
+    {{ form.csrf_token  }}
+
+        {{ form.email.label() }}
+        {{ form.email() }}
+
+        {{ form.nome.label() }}
+        {{ form.nome() }}
+
+        {{ form.senha.label() }}
+        {{ form.senha() }}
+
+        {{ form.confirmar_senha.label() }}
+        {{ form.confirmar_senha() }}
+
+        {{ form.botao_confirmar() }}
+
+    </form>
+{% endblock%}

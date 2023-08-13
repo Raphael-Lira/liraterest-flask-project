@@ -1,0 +1,16 @@
+{% extends "homepage.html" %}
+
+{% block titulo %}
+Liraterest Perfil
+{% endblock %}
+
+{% block body %}
+<body>
+<h1> Perfil do {{ usuario }}</h1>
+</body>
+<a href="{{ url_for('logout')}}">
+    <p>
+        Voltar para a homepage
+    </p>
+</a>
+{% endblock%}
